@@ -1,0 +1,17 @@
+import pandas as pd
+import numpy as np
+
+# Load the Iris dataset
+df = pd.read_csv('Iris.csv')
+
+# Drop the 'Id' column
+df = df.drop(columns=['Id'])
+
+# Display statistical information
+df.describe()
+
+# Check for NULL values
+df.isnull().sum()
+
+# Get the number of samples in each class
+df['Species'].value_counts()
